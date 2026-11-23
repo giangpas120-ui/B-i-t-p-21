@@ -2,58 +2,167 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Giới thiệu bản thân</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phạm Gia Huy - Portfolio Chuyên Nghiệp</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --primary-color: #2980b9;
+            --card-bg: #f9f9f9;
+            --nav-bg: #333333;
+            --nav-text: #ffffff;
+        }
+
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --primary-color: #3498db;
+            --card-bg: #1e1e1e;
+            --nav-bg: #000000;
+            --nav-text: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; transition: background-color 0.3s, color 0.3s; }
+        
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; background-color: var(--bg-color); color: var(--text-color); }
+        nav { background: var(--nav-bg); padding: 1rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        .nav-links a { color: var(--nav-text); margin: 0 10px; text-decoration: none; font-weight: bold; font-size: 15px;}
+        #dark-mode-toggle { background: none; border: 1px solid var(--nav-text); color: var(--nav-text); padding: 5px 10px; border-radius: 5px; cursor: pointer; }
+
+        
+        header { text-align: center; padding: 4rem 1rem; background: linear-gradient(135deg, var(--primary-color), #2c3e50); color: white; }
+        .avatar { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid white; margin-bottom: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        header h1 { font-size: 2rem; margin-bottom: 10px; }
+        
+        
+        section { padding: 3rem 1rem; max-width: 1000px; margin: 0 auto; }
+        section h2 { text-align: center; margin-bottom: 2rem; font-size: 1.8rem; color: var(--primary-color); }
+        
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .project-card { background: var(--card-bg); padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+        .project-card h3 { margin-bottom: 10px; color: var(--text-color); }
+        .project-card p { font-size: 14px; color: #888; }
+
+        
+        .contact-form { max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; background: var(--card-bg); color: var(--text-color); font-family: inherit; }
+        .contact-form button { padding: 12px; background: var(--primary-color); color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: bold; }
+        .contact-form button:hover { background: #1c5980; }
+
+        
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        footer { text-align: center; padding: 2rem; background: var(--nav-bg); color: var(--nav-text); margin-top: 2rem;}
+    </style>
 </head>
 <body>
 
-    <!-- 1. Tiêu đề chính (Tên của bạn) -->
-    <h1>Nguyễn Ngọc Giang</h1>
+    <nav>
+        <div class="nav-links">
+            <a href="#about">Giới thiệu</a>
+            <a href="#projects">Dự án</a>
+            <a href="#contact">Liên hệ</a>
+        </div>
+        <button id="dark-mode-toggle">🌙 Dark Mode</button>
+    </nav>
 
-    <!-- 2. Ảnh đại diện -->
-    <img src="ooo.jpg" alt="Ảnh đại diện của tôi" width="200">
+    <header>
+        
+        <img src="avatar.jpg" alt="Ảnh đại diện Phạm Gia Huy" class="avatar">
+        <h1>Xin chào! Mình là Phạm Gia Huy</h1>
+        <p>Full-stack Developer tương lai</p>
+    </header>
 
-    <p>Xin chào! Mình là <strong>sinh viên năm 3</strong> ngành Công nghệ thông tin, hiện đang học tập và làm quen với <em>lập trình web</em>.</p>
+    
+    <section id="about" class="reveal">
+        <h2>Về Bản Thân</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto;">Mình là sinh viên Khoa CNTT, đam mê lập trình Web và thiết kế giao diện. Mình đang trên hành trình trở thành một Full-stack Developer chuyên nghiệp.</p>
+    </section>
 
-    <!-- 3. Danh sách sở thích -->
-    <h3>Sở thích cá nhân</h3>
-    <ul>
-        <li>Lập trình và tìm hiểu công nghệ mới</li>
-        <li>Chơi game giải trí</li>
-        <li>Nghe nhạc và uống cà phê</li>
-    </ul>
+    
+    <section id="projects" class="reveal">
+        <h2>Dự án nổi bật</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Todo List JS</h3>
+                <p>Ứng dụng quản lý công việc hàng ngày bằng JavaScript thuần.</p>
+            </div>
+            <div class="project-card">
+                <h3>Weather App</h3>
+                <p>Xem thời tiết thời gian thực qua API OpenWeather.</p>
+            </div>
+            <div class="project-card">
+                <h3>Portfolio này</h3>
+                <p>Trang web cá nhân deploy bằng Cloudflare Pages.</p>
+            </div>
+            <div class="project-card">
+                <h3>E-commerce UI</h3>
+                <p>Giao diện bán hàng với HTML/CSS/JS.</p>
+            </div>
+            <div class="project-card">
+                <h3>Blog Cá Nhân</h3>
+                <p>Chia sẻ kiến thức lập trình cơ bản.</p>
+            </div>
+            <div class="project-card">
+                <h3>Game Đoán Số</h3>
+                <p>Game nhỏ vui nhộn ứng dụng logic JS.</p>
+            </div>
+        </div>
+    </section>
 
-    <!-- 4. Bảng thời khóa biểu -->
-    <h3>Thời khóa biểu trong tuần</h3>
-    <table border="1">
-        <tr>
-            <th>Thứ</th>
-            <th>Sáng</th>
-            <th>Chiều</th>
-        </tr>
-        <tr>
-            <td>Thứ 2</td>
-            <td>Cơ sở dữ liệu</td>
-            <td>Tự học HTML/CSS</td>
-        </tr>
-        <tr>
-            <td>Thứ 4</td>
-            <td>Mạng máy tính</td>
-            <td>Thực hành Web</td>
-        </tr>
-        <tr>
-            <td>Thứ 6</td>
-            <td>Lập trình hướng đối tượng</td>
-            <td>Nghỉ ngơi / Thể thao</td>
-        </tr>
-    </table>
 
-    <!-- 5. Liên kết tới mạng xã hội -->
-    <h3>Kết nối với mình</h3>
-    <p>
-        Theo dõi mình tại: 
-        <a href="https://facebook.com" target="_blank">Facebook</a> | 
-        <a href="https://github.com" target="_blank">GitHub</a>
-    </p>
+    <section id="contact" class="reveal">
+        <h2>Liên hệ với mình</h2>
+        <!-- NHỚ ĐỔI LINK FORMSPREE CỦA BẠN VÀO ĐÂY -->
+        <form class="contact-form" action="[https://formspree.io/f/mljbogba](https://formspree.io/f/xoedpjlo)" method="POST">
+            <input type="text" name="name" placeholder="Tên của bạn..." required>
+            <input type="email" name="email" placeholder="Email của bạn..." required>
+            <textarea name="message" rows="5" placeholder="Lời nhắn..." required></textarea>
+            <button type="submit">Gửi Tin Nhắn</button>
+        </form>
+    </section>
 
+    <footer>
+        <p>&copy; 2025 Phạm Gia Huy. Built with ❤️</p>
+    </footer>
+
+    <script>
+        
+        const toggleBtn = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+
+        
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            toggleBtn.innerText = '☀️ Light Mode';
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                toggleBtn.innerText = '☀️ Light Mode';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                toggleBtn.innerText = '🌙 Dark Mode';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        reveals.forEach(reveal => {
+            observer.observe(reveal);
+        });
+    </script>
 </body>
 </html>
