@@ -70,8 +70,8 @@
 
     <header>
         
-        <img src="avatar.jpg" alt="Ảnh đại diện Phạm Gia Huy" class="avatar">
-        <h1>Xin chào! Mình là Phạm Gia Huy</h1>
+        <img src="avatar.jpg" alt="Ảnh đại diện Nguyễn Ngọc Giang class="avatar">
+        <h1>Xin chào! Mình là Nguyễn Ngọc Giang</h1>
         <p>Full-stack Developer tương lai</p>
     </header>
 
@@ -125,7 +125,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Phạm Gia Huy. Built with ❤️</p>
+        <p>&copy; 2025 Nguyễn Ngọc Giang. Built with ❤️</p>
     </footer>
 
     <script>
