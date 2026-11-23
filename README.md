@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phạm Gia Huy - Portfolio Chuyên Nghiệp</title>
+    <title>Nguyễn Ngọc Giang- Portfolio Chuyên Nghiệp</title>
     <style>
         :root {
             --bg-color: #ffffff;
